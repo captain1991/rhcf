@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gengduo_item_selector"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_sj"
+        style="@style/hkjh_item_text_style"
+        android:text="2016/01/15" />
+
+    <TextView
+        android:id="@+id/tv_xm"
+        style="@style/hkjh_item_text_style"
+        android:text="充入" />
+
+    <TextView
+        android:id="@+id/tv_je"
+        style="@style/hkjh_item_text_style"
+        android:text="￥0.00" />
+
+    <TextView
+        android:id="@+id/tv_ye"
+        style="@style/hkjh_item_text_style"
+        android:text="￥0.00" />
+
+</LinearLayout>

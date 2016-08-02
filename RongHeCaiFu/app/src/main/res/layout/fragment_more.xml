@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gengduo_divider_color"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/panel_ggxw"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--style="@style/gengduo_item_panel_style">-->
+
+                <!--<ImageView-->
+                    <!--style="@style/gengduo_item_iv_style"-->
+                    <!--android:background="@drawable/ggxw" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/gengduo_item_tv_style"-->
+                    <!--android:text="@string/text_ggxw" />-->
+
+                <!--<include layout="@layout/nav_right" />-->
+            <!--</LinearLayout>-->
+
+            <!--<include layout="@layout/divider" />-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/panel_yqhyzjl"-->
+                <!--style="@style/gengduo_item_panel_style">-->
+
+                <!--<ImageView-->
+                    <!--style="@style/gengduo_item_iv_style"-->
+                    <!--android:background="@drawable/yaoqinghaoyou_more" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/gengduo_item_tv_style"-->
+                    <!--android:text="@string/text_yqhyzjl" />-->
+
+                <!--<include layout="@layout/nav_right" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/panel_grzx"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--style="@style/gengduo_item_panel_style">-->
+
+                <!--<ImageView-->
+                    <!--style="@style/gengduo_item_iv_style"-->
+                    <!--android:background="@drawable/grzx" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/gengduo_item_tv_style"-->
+                    <!--android:text="@string/text_grzx" />-->
+
+                <!--<include layout="@layout/nav_right" />-->
+            <!--</LinearLayout>-->
+
+            <!--<include layout="@layout/divider" />-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/panel_gywm"-->
+                <!--style="@style/gengduo_item_panel_style">-->
+
+                <!--<ImageView-->
+                    <!--style="@style/gengduo_item_iv_style"-->
+                    <!--android:background="@drawable/gywm" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/gengduo_item_tv_style"-->
+                    <!--android:text="@string/text_gywm" />-->
+
+                <!--<include layout="@layout/nav_right" />-->
+            <!--</LinearLayout>-->
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:id="@+id/panel_kfrx"
+                style="@style/gengduo_item_panel_style">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/kfrx" />
+
+                <TextView
+                    style="@style/gengduo_item_tv_style"
+                    android:text="@string/text_kfrx" />
+
+                <include layout="@layout/nav_right" />
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:id="@+id/panel_yjfk"
+                style="@style/gengduo_item_panel_style">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/yjfk" />
+
+                <TextView
+                    style="@style/gengduo_item_tv_style"
+                    android:text="@string/text_yjfk" />
+
+                <include layout="@layout/nav_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_xxss"
+                android:layout_marginTop="20dp"
+                android:paddingRight="0dp"
+                style="@style/gengduo_item_panel_style">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/xxss" />
+
+                <TextView
+                    style="@style/gengduo_item_tv_style"
+                    android:text="@string/text_xxss" />
+
+                <ToggleButton
+                    android:id="@+id/xx_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn=""
+                    android:focusable="false"
+                    android:background="@drawable/xx_toggle_selector" />
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:id="@+id/panel_qchc"
+                style="@style/gengduo_item_panel_style">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/qchc" />
+
+                <TextView
+                    style="@style/gengduo_item_tv_style"
+                    android:text="@string/text_qchc" />
+
+                <TextView
+                    android:id="@+id/tv_cache_size"
+                    style="@style/gengduo_item_tv_style"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginRight="3dp"
+                    android:textSize="@dimen/textfield_size_14"
+                    android:text="0.0KB" />
+
+                <include layout="@layout/nav_right" />
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:id="@+id/panel_bbgx"
+                android:layout_marginBottom="35dp"
+                style="@style/gengduo_item_panel_style">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/bbgx" />
+
+                <TextView
+                    style="@style/gengduo_item_tv_style"
+                    android:text="@string/text_bbgx" />
+
+                <TextView
+                    android:id="@+id/tv_new_version"
+                    style="@style/gengduo_item_tv_style"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginRight="3dp"
+                    android:textSize="@dimen/textfield_size_14"
+                    android:text="可更新版本V1.0.2" />
+
+                <include layout="@layout/nav_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

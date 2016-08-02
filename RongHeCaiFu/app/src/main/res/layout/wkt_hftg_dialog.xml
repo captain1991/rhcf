@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_general_round_corner"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_wkthfzh_top_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_grzhsj"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="@string/text_kthfzh_notice"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="13dp"
+        android:layout_marginTop="13dp">
+
+        <EditText
+            android:id="@+id/et_txxm"
+            style="@style/zhanghu_dialog_edit_style"
+            android:hint="请填写真实姓名" />
+
+        <EditText
+            android:id="@+id/et_txsfz"
+            style="@style/zhanghu_dialog_edit_style"
+            android:layout_marginTop="10dp"
+            android:hint="请填写正确的身份真号码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_wkthfzh_bottom_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/zhanghu_dialog_button_style"
+                android:background="@drawable/zhsj_qx_bg"
+                android:text="@string/text_qx"
+                android:textColor="@color/myyq_value_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_kt"
+                style="@style/zhanghu_dialog_button_style"
+                android:background="@drawable/zhsj_qkt_bg"
+                android:text="@string/text_qkt"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

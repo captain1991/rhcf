@@ -1,0 +1,24 @@
+1,包说明：
+  com.alipay.euler:andfix:0.3.1@aar
+  功能：阿里的热升级；
+     支持android 2.3+(包括android6.0)版本；
+     注意代码混淆；
+2，友盟分享；
+2，友盟分析；
+3，极光推送；
+
+4，更新，文件下载；
+5，UI适配；
+6, android 屏幕适配
+ldpi : mdpi : hdpi : xhdpi : xxhdpi : xxxhdpi  ==  0.75 : 1 : 1.5 : 2 : 3 : 4
+
+7，应用安装成功时，删除apatch文件；
+8，下载地址记得更换；
+
+
+
+
+
+
+
+

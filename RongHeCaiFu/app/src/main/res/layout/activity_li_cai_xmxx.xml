@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar" />
+
+    <com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/pullto_refresh_layout_style">
+
+    <com.ayd.rhcf.view.pulltorefresh.PullableScrollView style="@style/pullto_refresh_scrollview_style">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/gengduo_divider_color">
+
+            <TextView
+                android:text="@string/text_jkrxx"
+                style="@style/licai_cpxq_xmxx_text_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gv_item_bg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                    <TextView
+                        android:id="@+id/tv_yhm"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_yhm" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_xb"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_xb" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_ywgc"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_ywgc" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_gzcs"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_gzcs" />
+
+                </LinearLayout>
+
+                <include layout="@layout/shouye_vertical_divider" />
+
+                <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                    <TextView
+                        android:id="@+id/tv_zsxm"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_zsxm" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_csrq"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_csrq" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_ywgf"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_ywgf" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_gznx"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_xmxx_gznx" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/text_dybxx"
+                style="@style/licai_cpxq_xmxx_text_style" />
+
+            <TextView
+                android:id="@+id/tv_dybxq_content"
+                style="@style/licai_xmxx_text_style"
+                android:background="@drawable/gv_item_bg"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="10dp"
+                android:text="抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情抵押标详情" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gv_item_bg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="15sp"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                    <TextView
+                        android:id="@+id/tv_dywlx"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_dywlx" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_pgjz"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_pgjz" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                    <TextView
+                        android:id="@+id/tv_qdsj"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_qdsj" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_sqed"
+                        style="@style/licai_xmxx_text_style"
+                        android:text="@string/text_sqed" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/text_rzzl"
+                style="@style/licai_cpxq_xmxx_text_style"
+                android:layout_marginBottom="25dp" />
+
+        </LinearLayout>
+
+
+    </com.ayd.rhcf.view.pulltorefresh.PullableScrollView>
+
+    </com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout>
+    <Button
+        android:id="@+id/btn_ljtz"
+        style="@style/btn_litz_style"
+        android:text="@string/text_ljtz" />
+</LinearLayout>

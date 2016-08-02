@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        layout="@layout/base_titlebar" />
+
+    <com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/pullto_refresh_layout_style">
+
+        <com.ayd.rhcf.view.pulltorefresh.PullableScrollView
+            style="@style/pullto_refresh_scrollview_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/color_white">
+
+                <include
+                    android:id="@+id/panel_top"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    layout="@layout/scrollview_header_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_xm_name"
+                        style="@style/xmze_text_style"
+                        android:text="项目优选B11012"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp" />
+
+                    <include layout="@layout/divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout style="@style/zc_top_item_panel_style">
+
+                            <TextView
+                                style="@style/zc_black_text_value_style"
+                                android:textColor="@color/licai_item_text_color1"
+                                android:text="@string/text_xmze" />
+
+                            <TextView
+                                android:id="@+id/tv_xmze"
+                                android:layout_marginTop="10dp"
+                                style="@style/zc_yellow_text_value_style"
+                                android:textColor="@color/licai_item_text_color1"
+                                android:textSize="@dimen/myyq_value_text_size"
+                                android:text="0.00" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/zc_top_item_panel_style">
+
+                            <TextView
+                                style="@style/zc_black_text_value_style"
+                                android:textColor="@color/licai_item_text_color1"
+                                android:text="@string/text_nhsy" />
+
+                            <TextView
+                                android:id="@+id/tv_nhsy"
+                                android:layout_marginTop="10dp"
+                                style="@style/zc_yellow_text_value_style"
+                                android:textColor="@color/licai_item_text_color1"
+                                android:textSize="@dimen/myyq_value_text_size"
+                                android:text="0.00" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:weightSum="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <com.ayd.rhcf.view.AnimProgressBar
+                            android:id="@+id/progressbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="6dp"
+                            android:layout_weight="0.8"
+                            android:layout_marginLeft="10dp"
+                            android:progress="0"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progressbar_drawable"
+                            style="?android:attr/progressBarStyleHorizontal" />
+
+                        <TextView
+                            android:id="@+id/progress_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/zc_black_text_value_style"
+                            android:textColor="@color/licai_item_text_color1"
+                            android:layout_marginLeft="10dp"
+                            android:text="0%" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:text="@string/text_xmqx" />
+
+                    <TextView
+                        android:id="@+id/tv_xmqx"
+                        style="@style/cpxq_tv_style"
+                        android:layout_marginLeft="10dp"
+                        android:text="30天" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:text="@string/text_hkfs" />
+
+                    <TextView
+                        android:id="@+id/tv_hkfs"
+                        style="@style/cpxq_tv_style"
+                        android:layout_marginLeft="10dp"
+                        android:text="按月付息" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:id="@+id/llt_sysj"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        android:id="@+id/tt_sysj"
+                        style="@style/cpxq_tv_style"
+                        android:text="@string/text_sysj" />
+
+                    <TextView
+                        android:id="@+id/tv_sysj"
+                        style="@style/cpxq_tv_style"
+                        android:layout_marginLeft="10dp"
+                        android:text="3天2小时3分2秒" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_qtje"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        android:id="@+id/tt_qtje"
+                        style="@style/cpxq_tv_style"
+                        android:text="@string/text_qtje" />
+
+                    <TextView
+                        android:id="@+id/tv_qtje"
+                        style="@style/cpxq_tv_style"
+                        android:layout_marginLeft="10dp"
+                        android:text="100" />
+                </LinearLayout>
+                <include layout="@layout/divider" />
+
+                <include layout="@layout/scrollview_header_divider" />
+
+                <include layout="@layout/divider" />
+
+
+                <LinearLayout
+                    android:id="@+id/panel_xmxx"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_xmxx" />
+
+                    <include layout="@layout/nav_right" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:id="@+id/panel_fkxx"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_fkxx" />
+
+                    <include layout="@layout/nav_right"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/panel_tzjl"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_tzjl" />
+
+                    <include layout="@layout/nav_right" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:id="@+id/panel_hkjh"
+                    style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/cpxq_tv_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_hkjh" />
+
+                    <include layout="@layout/nav_right" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginBottom="25dp" />
+            </LinearLayout>
+
+        </com.ayd.rhcf.view.pulltorefresh.PullableScrollView>
+    </com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_ljtz"
+        style="@style/btn_litz_style"
+        android:text="@string/text_ljtz" />
+</LinearLayout>

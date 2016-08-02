@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/scrollview_header_divider"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gv_item_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    style="@style/zc_black_text_value_style"
+                    android:text="@string/text_yjzsy"
+                    android:textColor="@color/licai_item_text_color1" />
+
+                <TextView
+                    android:id="@+id/tv_yjzsy"
+                    style="@style/zc_black_text_value_style"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/text_ssf_hint"
+                    android:textColor="@color/licai_item_text_color1"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/scrollview_header_divider"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/shape_with_round_corner"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:paddingLeft="15dp"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--style="@style/licai_item_text1_style"-->
+            <!--android:text="@string/text_input_tzje" />-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/et_tzje"-->
+            <!--android:numeric="decimal"-->
+            <!--style="@style/login_page_et_style" />-->
+            <!--</LinearLayout>-->
+            <EditText
+                android:id="@+id/et_tzje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_with_round_corner"
+                android:gravity="center_vertical"
+                android:hint="@string/text_input_tzje"
+                android:numeric="decimal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/licai_item_text1_style"
+                    android:text="@string/text_ktje" />
+
+                <TextView
+                    android:id="@+id/tv_ktje"
+                    style="@style/licai_item_text1_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:text="@string/text_ssf_hint" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/licai_item_text1_style"
+                    android:text="@string/text_zhye" />
+
+                <TextView
+                    android:id="@+id/tv_zhye"
+                    style="@style/licai_item_text1_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:text="@string/text_ssf_hint" />
+
+                <TextView
+                    android:id="@+id/tv_cz"
+                    style="@style/licai_item_text1_style"
+                    android:text="@string/text_cz"
+                    android:textColor="@color/cz_text_color"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_cz"
+                style="@style/login_btn_style"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/qztz" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

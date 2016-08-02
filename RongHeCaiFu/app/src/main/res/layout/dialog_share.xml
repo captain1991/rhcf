@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_general_round_corner2">
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/text_size_12dp"
+        android:paddingBottom="@dimen/text_size_20dp"
+        android:paddingLeft="@dimen/text_size_12sp"
+        android:paddingRight="@dimen/text_size_12sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/text_size_12sp"
+            android:text="分享到" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bfbfbf"
+            android:layout_marginLeft="@dimen/text_size_15dp"
+            android:layout_marginRight="@dimen/text_size_15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_qq"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:clickable="true"
+                android:src="@drawable/umeng_socialize_qq_on" />
+            <ImageView
+                android:id="@+id/iv_wx"
+                android:layout_toRightOf="@id/iv_qq"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:layout_marginLeft="@dimen/zh_iv_anndy_size"
+                android:clickable="true"
+                android:src="@drawable/umeng_socialize_wechat" />
+            <ImageView
+                android:id="@+id/iv_sina"
+                android:layout_marginLeft="@dimen/zh_iv_anndy_size"
+                android:layout_toRightOf="@id/iv_wx"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:clickable="true"
+                android:src="@drawable/umeng_socialize_sina_on" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qq"
+                android:layout_alignRight="@id/iv_qq"
+                android:layout_alignLeft="@id/iv_qq"
+                android:gravity="center"
+                android:text="QQ"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qq"
+                android:layout_alignRight="@id/iv_wx"
+                android:layout_alignLeft="@id/iv_wx"
+                android:gravity="center"
+                android:text="微信"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qq"
+                android:layout_alignRight="@id/iv_sina"
+                android:layout_alignLeft="@id/iv_sina"
+                android:gravity="center"
+                android:text="新浪"/>
+
+            <ImageView
+                android:id="@+id/iv_qqzone"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:src="@drawable/umeng_socialize_qzone_on"
+                android:layout_marginTop="31dp"
+                android:clickable="true"
+                android:layout_below="@id/iv_qq"/>
+            <ImageView
+                android:id="@+id/iv_wxfriend"
+                android:layout_toRightOf="@id/iv_qqzone"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:layout_marginLeft="@dimen/zh_iv_anndy_size"
+                android:layout_marginTop="31dp"
+                android:layout_below="@id/iv_qq"
+                android:clickable="true"
+                android:src="@drawable/umeng_socialize_wxcircle" />
+            <ImageView
+                android:id="@+id/iv_xx"
+                android:layout_toRightOf="@id/iv_wxfriend"
+                android:layout_width="@dimen/licai_item_top_right_iv_size"
+                android:layout_height="@dimen/licai_item_top_right_iv_size"
+                android:layout_marginLeft="@dimen/zh_iv_anndy_size"
+                android:layout_marginTop="31dp"
+                android:layout_below="@id/iv_qq"
+                android:clickable="true"
+                android:src="@drawable/umeng_socialize_sms_on" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qqzone"
+                android:layout_alignRight="@id/iv_sina"
+                android:layout_alignLeft="@id/iv_sina"
+                android:gravity="center"
+                android:text="信息"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qqzone"
+                android:layout_alignLeft="@id/iv_wxfriend"
+                android:gravity="center"
+                android:text="朋友圈"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_below="@id/iv_qqzone"
+                android:layout_alignLeft="@id/iv_qqzone"
+                android:gravity="center"
+                android:text="qq空间"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_bottom_iv_size"
+            android:background="@drawable/login_btn_selector"
+            android:layout_marginLeft="@dimen/text_size_20dp"
+            android:layout_marginRight="@dimen/text_size_20dp"
+            android:layout_marginTop="10dp"
+            android:text="取消"
+            android:textColor="@color/color_white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

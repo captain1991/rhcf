@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/scrollview_header_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_phonenumber"
+                    style="@style/login_page_et_style"
+                    android:phoneNumber="true"
+                    android:hint="请输入绑定的手机号" />
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/shanchu"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_yzm"
+                    style="@style/login_page_et_style"
+                    android:hint="请输入右侧的验证码" />
+
+                <ImageView
+                    android:id="@+id/iv_yzm"
+                    android:layout_width="54dp"
+                    android:layout_height="32dp"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/login_btn_style"
+                android:text="@string/text_next_step" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.ayd.rhcf"
+        minSdkVersion 9
+        targetSdkVersion 22 //Mob建议用22，过高可能被拒
+        versionCode 1
+        versionName "1.0.0"
+        //multiDexEnabled true
+    }
+
+    buildTypes {
+
+        // debug版本；
+        //shrinkResources为true时，需要配合minifyEnabled一起使用；
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            //proguard-rules.pro 是当前使用的混淆文件（Eclipse中的proguard.cfg)
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // release版本；
+        release {
+            //代码混淆开关，一定要注意现在已经使用minifyEnabled代替runProguard了
+            //代码混淆后，包体积明显缩小；
+            minifyEnabled true
+            shrinkResources true
+            //加载默认混淆配置文件及自定义混淆 配置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+/*Android 多渠道打包(渠道名称不能以数字开头), */
+    productFlavors {
+        // 应用宝；
+        yingyongbao {
+            manifestPlaceholders = [CHANNEL_ID: "yingyongbao"]
+        }
+//        360手机助手
+        shoujizhushou360 {
+            manifestPlaceholders = [CHANNEL_ID: "shoujizhushou360"]
+        }
+//        百度手机助手
+        baidusjzs {
+            manifestPlaceholders = [CHANNEL_ID: "baidusjzs"]
+        }
+//        豌豆荚
+        wandoujia {
+            manifestPlaceholders = [CHANNEL_ID: "wandoujia"]
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    //程序在buid的时候，会执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'AndroidManifext.xml'
+    }
+
+    dexOptions {
+        //xx为合理的内存大小
+//        javaMaxHeapSize "xx"
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.0.2', ext: 'aar'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.alipay.euler:andfix:0.3.1@aar'
+    // 阿里的热更新；
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.google.code.gson:gson:2.6.2'
+}

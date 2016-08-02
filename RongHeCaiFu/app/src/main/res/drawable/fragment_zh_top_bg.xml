@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/zc_top_solid_color" />
+
+    <!-- 从上到下渐变-->
+    <gradient
+        android:startColor="@color/zc_top_start_color"
+        android:centerColor="@color/zc_top_center_color"
+        android:centerX="0.2"
+        android:centerY="0.2"
+        android:endColor="@color/zc_top_end_color"
+        android:angle="270" />
+</shape>

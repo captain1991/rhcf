@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/base_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gengduo_divider_color"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/panel_top"
+                layout="@layout/scrollview_header_divider"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_alignParentTop="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_size_15dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/zqxx_text_style"
+                        android:text="@string/text_zrbd" />
+
+                    <TextView
+                        android:id="@+id/tv_zrbd"
+                        style="@style/zqxx_text_style"
+                        android:text="B1001" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/zqxx_text_style"
+                        android:text="@string/text_max_zrjg" />
+
+                    <TextView
+                        android:id="@+id/tv_zgzrjg"
+                        style="@style/zqxx_text_style"
+                        android:text="0.00" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/zqxx_text_style"
+                        android:text="@string/text_sxf_" />
+
+                    <TextView
+                        android:id="@+id/tv_sxf"
+                        style="@style/zqxx_text_style"
+                        android:text="0.00" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout style="@style/gengduo_item_panel_style">
+
+                    <TextView
+                        style="@style/zqxx_text_style"
+                        android:text="@string/text_zrje" />
+
+                    <EditText
+                        android:id="@+id/tv_zrje"
+                        style="@style/login_page_et_yzm_style"
+                        android:background="@drawable/shape_with_no_corner"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text=""
+                        android:textSize="@dimen/text_size_18sp" />
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    style="@style/gengduo_item_panel_style"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_yzm"
+                        style="@style/login_page_et_yzm_style"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/shape_with_no_corner"
+                        android:hint="@string/text_input_yzm_hint"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <Button
+                        android:id="@+id/btn_get_yzm"
+                        style="@style/btn_background_style"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/get_yzm_yellow_selector"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/text_get_yzm" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ljzr"
+                style="@style/login_btn_style"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/text_ljzr" />
+
+
+            <TextView
+                android:id="@+id/tv_wxts"
+                style="@style/licai_item_text2_style"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="25dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

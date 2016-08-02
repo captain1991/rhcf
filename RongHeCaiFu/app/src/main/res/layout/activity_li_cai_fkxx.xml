@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar" />
+
+
+    <com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/pullto_refresh_layout_style">
+
+        <com.ayd.rhcf.view.pulltorefresh.PullableScrollView style="@style/pullto_refresh_scrollview_style">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/gengduo_divider_color">
+
+                <TextView
+                    android:text="@string/text_fkpj"
+                    style="@style/licai_cpxq_xmxx_text_style" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gv_item_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_level"
+                            style="@style/licai_fkxx_xyf_blue_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_toLeftOf="@+id/rl_pf"
+                            android:layout_alignTop="@+id/rl_pf"
+                            android:text="AA" />
+
+                        <com.ayd.rhcf.view.PfProgressView
+                            android:id="@+id/rl_pf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/color_white"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_xyf"
+                                style="@style/licai_fkxx_xyf_blue_text_style"
+                                android:text="@string/text_xyf" />
+
+                            <TextView
+                                android:id="@+id/tv_xyf_value"
+                                style="@style/licai_fkxx_xyf_blue_text_style"
+                                android:text="@string/text_zero"
+                                android:textSize="20sp"
+                                android:layout_marginTop="5dp" />
+
+                        </com.ayd.rhcf.view.PfProgressView>
+
+                        <TextView
+                            android:id="@+id/tv_level2"
+                            style="@style/licai_fkxx_xyf_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/rl_pf"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/text_fkxx_xy_level" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gv_item_bg"
+                        android:orientation="horizontal">
+
+                        <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                            <TextView
+                                android:id="@+id/tv_jbxx"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_jbxx" />
+
+                            <include layout="@layout/divider" />
+
+                            <TextView
+                                android:id="@+id/tv_xyzk"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_xyzk" />
+
+                            <include layout="@layout/divider" />
+
+                            <TextView
+                                android:id="@+id/tv_dywpg"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_dywpg" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/shouye_vertical_divider" />
+
+                        <LinearLayout style="@style/licai_xmxx_panel_style">
+
+                            <TextView
+                                android:id="@+id/tv_jjnl"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_jjnl" />
+
+                            <include layout="@layout/divider" />
+
+                            <TextView
+                                android:id="@+id/tv_wwdy"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_wwdy" />
+
+                            <include layout="@layout/divider" />
+
+                            <TextView
+                                android:id="@+id/tv_zyqk"
+                                style="@style/licai_xmxx_text_style"
+                                android:text="@string/text_fkxx_zyqk" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="@string/text_rhdsc"
+                    style="@style/licai_cpxq_xmxx_text_style" />
+
+                <TextView
+                    android:id="@+id/text_rhdsc_content"
+                    style="@style/licai_xmxx_text_style"
+                    android:background="@drawable/gv_item_bg"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="融和贷审查内容融和贷审查内容融和贷审查内容融和贷审查内容融和贷审查内容融和贷审查内容融和贷审查内容" />
+
+            </LinearLayout>
+
+
+        </com.ayd.rhcf.view.pulltorefresh.PullableScrollView>
+
+    </com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_ljtz"
+        style="@style/btn_litz_style"
+        android:text="@string/text_ljtz" />
+</LinearLayout>

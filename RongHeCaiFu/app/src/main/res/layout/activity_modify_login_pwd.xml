@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/base_titlebar"
+        android:id="@+id/titlebar"/>
+
+    <ScrollView
+        android:layout_below="@id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/scrollview_header_divider" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/suo" />
+
+                <EditText
+                    android:id="@+id/et_old_pwd"
+                    style="@style/login_page_et_style"
+                    android:inputType="textPassword"
+                    android:hint="@string/text_input_old_pwd_hint" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/suo" />
+
+                <EditText
+                    android:id="@+id/et_new_pwd1"
+                    style="@style/login_page_et_style"
+                    android:inputType="textPassword"
+                    android:hint="@string/text_input_newpwd_hint" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/gengduo_item_iv_style"
+                    android:background="@drawable/suo" />
+
+                <EditText
+                    android:id="@+id/et_new_pwd2"
+                    style="@style/login_page_et_style"
+                    android:inputType="textPassword"
+                    android:hint="@string/text_input_surepwd_hint" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sure"
+                style="@style/login_btn_style"
+                android:text="@string/text_yes" />
+
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/submit_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

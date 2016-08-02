@@ -1,0 +1,9 @@
+1，关闭Log；
+2，Application中关闭debug模式；
+3，AndFix热修复的 代码混淆和配置；
+4, xUtils的混淆；
+5，热修复，避免重复更新；
+
+        当apk版本升级，需要把之前patch文件的删除，需要以下操作
+     *删除所有已加载的patch文件
+     mPatchManager.removeAllPatch();

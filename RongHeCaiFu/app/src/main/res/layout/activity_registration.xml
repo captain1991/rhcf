@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/scrollview_header_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_uname"
+                    style="@style/login_page_et_style"
+                    android:hint="@string/text_input_phonenumber_hint"
+                    android:phoneNumber="true" />
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/shanchu"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_txyzm"
+                    style="@style/login_page_et_style"
+                    android:hint="请输入图形验证码"
+                    android:numeric="integer"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_txyzm"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_yzm"
+                    style="@style/login_page_et_yzm_style"
+                    android:hint="@string/text_input_yzm_hint" />
+
+                <Button
+                    android:id="@+id/btn_get_yzm"
+                    style="@style/btn_background_style"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/text_get_yzm" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    style="@style/login_page_et_style"
+                    android:hint="@string/text_input_pwd_hint"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/iv_eye"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/eye1"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+
+
+            <EditText
+                android:id="@+id/et_yqm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="@string/text_input_yqm_hint"
+                android:paddingBottom="@dimen/text_size_15dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="@dimen/text_size_15dp"
+                android:singleLine="true"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textfield_size_16" />
+
+            <Button
+                android:id="@+id/btn_regist"
+                style="@style/login_btn_style"
+                android:text="@string/text_next_step" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/regist_checkbox_selector"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_notice_sub1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:singleLine="false"
+                    android:text="@string/protocal_notice1"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textfield_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_notice_sub2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text="@string/protocal_notice2"
+                    android:textColor="@color/titlebar_bg_color"
+                    android:textSize="@dimen/textfield_size_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/progress_layout"
+            android:id="@+id/progress_layout"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>
